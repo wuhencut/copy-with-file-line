@@ -5,44 +5,40 @@ const svg = `
 <svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#4A90D9"/>
-      <stop offset="100%" stop-color="#2D5C8A"/>
+      <stop offset="0%" stop-color="#5B86E5"/>
+      <stop offset="100%" stop-color="#36D1DC"/>
     </linearGradient>
     <linearGradient id="hl" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFC857"/>
-      <stop offset="100%" stop-color="#FFA726"/>
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#FFB300"/>
     </linearGradient>
   </defs>
 
-  <rect x="0" y="0" width="256" height="256" rx="48" fill="url(#bg)"/>
+  <rect x="0" y="0" width="256" height="256" rx="52" fill="url(#bg)"/>
 
-  <rect x="48" y="48" width="160" height="180" rx="12" fill="#ffffff" opacity="0.13"/>
-  <rect x="48" y="48" width="160" height="180" rx="12" fill="#ffffff" opacity="0.08"/>
+  <rect x="48" y="44" width="160" height="168" rx="14" fill="#ffffff"/>
+  <rect x="48" y="44" width="160" height="32" rx="14" fill="#F5F5F5"/>
+  <rect x="48" y="62" width="160" height="14" fill="#F5F5F5"/>
 
-  <rect x="88" y="56" width="60" height="14" rx="3" fill="#ffffff" opacity="0.15"/>
+  <circle cx="63" cy="60" r="3.5" fill="#D0D0D0"/>
+  <circle cx="78" cy="60" r="3.5" fill="#D0D0D0"/>
+  <circle cx="93" cy="60" r="3.5" fill="#D0D0D0"/>
 
-  <rect x="64" y="82" width="130" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
-  <rect x="64" y="96" width="110" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
-  <rect x="64" y="110" width="140" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
+  <rect x="62" y="82" width="80" height="4" rx="2" fill="#E8E8E8"/>
+  <rect x="62" y="94" width="120" height="4" rx="2" fill="#E8E8E8"/>
+  <rect x="62" y="106" width="65" height="4" rx="2" fill="#E8E8E8"/>
 
-  <rect x="56" y="124" width="155" height="24" rx="6" fill="url(#hl)" opacity="0.3"/>
-  <rect x="64" y="130" width="125" height="6" rx="3" fill="#FFC857"/>
+  <rect x="56" y="118" width="145" height="28" rx="6" fill="url(#hl)" opacity="0.25"/>
 
-  <text x="64" y="130" font-family="monospace" font-size="9" fill="#ffffff" opacity="0.7"
-        text-anchor="start" dominant-baseline="middle">42</text>
-  <rect x="80" y="127" width="1" height="18" fill="#ffffff" opacity="0.4"/>
+  <text x="63" y="136" font-family="monospace" font-size="10" fill="#B0BEC5"
+        text-anchor="start" dominant-baseline="middle">12</text>
+  <rect x="80" y="120" width="1" height="24" fill="#E0E0E0"/>
+  <rect x="88" y="128" width="100" height="4" rx="2" fill="#FFB300" opacity="0.9"/>
 
-  <rect x="56" y="156" width="85" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
-  <rect x="56" y="170" width="120" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
-  <rect x="56" y="184" width="95" height="6" rx="3" fill="#ffffff" opacity="0.5"/>
-
-  <rect x="56" y="202" width="144" height="20" rx="4" fill="#ffffff" opacity="0.1"/>
-  <text x="128" y="215" font-family="sans-serif" font-size="10" fill="#ffffff" opacity="0.8"
-        text-anchor="middle" dominant-baseline="middle" font-weight="bold">copy-with-file-line</text>
-
-  <rect x="196" y="48" width="24" height="24" rx="6" fill="#FFC857" opacity="0.9"/>
-  <text x="208" y="63" font-family="sans-serif" font-size="12" fill="#2D5C8A"
-        text-anchor="middle" dominant-baseline="middle" font-weight="bold">L</text>
+  <rect x="62" y="156" width="105" height="4" rx="2" fill="#E8E8E8"/>
+  <rect x="62" y="168" width="90" height="4" rx="2" fill="#E8E8E8"/>
+  <rect x="62" y="180" width="50" height="4" rx="2" fill="#E8E8E8"/>
+  <rect x="62" y="192" width="115" height="4" rx="2" fill="#E8E8E8"/>
 </svg>
 `;
 
