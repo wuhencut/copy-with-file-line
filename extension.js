@@ -6,13 +6,15 @@ const vscode = require('vscode');
  *  - `copyWithFileLine.copy`：选中代码 → 拼装 `{文件路径}:{行号}\n{选中代码}` → 写入剪贴板
  *  - `copyWithFileLine.copyPath`：同上，但不含代码正文
  *
+ * 无选区时自动复制光标所在整行
+ *
  * @param context - VS Code 扩展上下文；`subscriptions.push` 注册命令，扩展停用时自动清理
  */
 function activate(context) {
   // 将两个命令注册推入 subscriptions，确保停用时释放
   context.subscriptions.push(
     // 命令①：复制代码 + 文件路径 + 行号
-    vscode.commands.registerCommand('copyWithFileLine.copy', () => {
+    vscode.commands.registerCommand('copyWithFileLine.copy', async () => {
       // 获取当前活跃编辑器，没有则静默退出
       const editor = vscode.window.activeTextEditor;
       if (!editor) return;
@@ -26,16 +28,24 @@ function activate(context) {
       const startLine = sel.start.line + 1;
       // 选中结束行号，同上转换
       const endLine = sel.end.line + 1;
-      // 选中区域的代码正文
-      const text = doc.getText(sel);
       // 单行显示 `249`，多行显示 `249-260`
       const lineRange = startLine === endLine ? `${startLine}` : `${startLine}-${endLine}`;
-      // 前缀 = 文件路径 + 冒号 + 行号范围 + 换行
-      const prefix = `${filePath}:${lineRange}\n`;
-      // 完整内容写入剪贴板
-      vscode.env.clipboard.writeText(prefix + text);
-      // 状态栏短暂提示成功信息（3 秒后自动消失）
-      vscode.window.setStatusBarMessage(`Copied ${filePath}:${lineRange}`, 3000);
+      // 无选区时取光标所在整行，否则取选中内容
+      const text = sel.isEmpty
+        ? doc.lineAt(sel.start.line).text
+        : doc.getText(sel);
+      // 预期内容
+      const expected = `${filePath}:${lineRange}\n${text}`;
+      // 写入剪贴板
+      await vscode.env.clipboard.writeText(expected);
+      // 回读校验
+      const actual = await vscode.env.clipboard.readText();
+      // 弹窗反馈校验结果
+      if (actual === expected) {
+        vscode.window.showInformationMessage(`✓ 复制成功 ${filePath}:${lineRange}`);
+      } else {
+        vscode.window.showErrorMessage(`✗ 复制失败，粘贴板内容不匹配`);
+      }
     }),
     // 命令②：只复制文件路径 + 行号（不含代码）
     vscode.commands.registerCommand('copyWithFileLine.copyPath', () => {

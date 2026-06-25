@@ -1,18 +1,37 @@
 {
   "name": "copy-with-file-line",
   "publisher": "LaaaaaaZzy",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "displayName": "Copy with File & Line",
-  "description": "Copy selected code with file path and line numbers — one shortcut, ready for AI prompts, code review, and documentation",
+  "description": "Copy selected code (or current line) with full file path and line numbers to clipboard. One shortcut, ready for AI prompts, code review, bug reports, and documentation. Supports both code+path and path-only copying.",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/wuhencut/copy-with-file-line"
   },
-  "engines": { "vscode": "^1.75.0" },
-  "categories": ["Other"],
-  "keywords": ["copy", "line number", "file path", "clipboard"],
-  "activationEvents": ["onStartupFinished"],
+  "homepage": "https://github.com/wuhencut/copy-with-file-line",
+  "bugs": {
+    "url": "https://github.com/wuhencut/copy-with-file-line/issues"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "copy",
+    "line number",
+    "file path",
+    "clipboard",
+    "code review",
+    "AI prompt",
+    "context",
+    "reference"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./extension.js",
   "contributes": {
     "commands": [
@@ -32,7 +51,7 @@
         "when": "editorTextFocus"
       },
       {
-        "key": "shift+ctrl+c",
+        "key": "alt+c",
         "command": "copyWithFileLine.copy",
         "when": "editorTextFocus"
       }
