@@ -6,12 +6,13 @@ Copy selected code (or current line) with full file path and line numbers to cli
 
 | Action | Shortcut / Command | Output |
 |---|---|---|
-| Copy code + path + line | `Shift+Cmd+C` (Mac) / `Shift+Ctrl+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
+| Copy code + path + line | `Shift+Cmd+C` (Mac) / `Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
 | Copy path + line only | Command Palette: *Copy File Path & Line Number Only* | `/path/to/file.ts:15-22` |
 
 - **Smart line detection**: Single line → `file.ts:12`, multiple lines → `file.ts:12-18`
 - **No selection?** Copies the entire current line automatically
 - **Right-click context menu**: Quick access from the editor context menu
+- **Clipboard verification**: After copying, verifies clipboard content matches and shows a popup notification
 
 ## Usage Examples
 
@@ -47,7 +48,9 @@ Environment: /config/database.ts:10-14
 
 ### 1.1.0
 - Auto-copy current line when no text is selected
-- Improved status bar feedback
+- Clipboard verification with popup success/error notification
+- Added `Alt+C` shortcut for Windows/Linux
+- Improved README and metadata
 
 ### 1.0.0
 - Initial release: copy selected code with file path and line numbers
