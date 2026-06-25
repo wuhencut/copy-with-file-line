@@ -1,0 +1,49 @@
+{
+  "name": "copy-with-file-line",
+  "publisher": "LaaaaaaZzy",
+  "version": "1.0.0",
+  "displayName": "Copy with File & Line",
+  "description": "Copy selected code with file path and line numbers — one shortcut, ready for AI prompts, code review, and documentation",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LaaaaaaZzy/copy-with-file-line"
+  },
+  "engines": { "vscode": "^1.75.0" },
+  "categories": ["Other"],
+  "keywords": ["copy", "line number", "file path", "clipboard"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copyWithFileLine.copy",
+        "title": "Copy Code with File Path & Line Number"
+      },
+      {
+        "command": "copyWithFileLine.copyPath",
+        "title": "Copy File Path & Line Number Only"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "shift+cmd+c",
+        "command": "copyWithFileLine.copy",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+ctrl+c",
+        "command": "copyWithFileLine.copy",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "copyWithFileLine.copy",
+          "group": "5_copypaste"
+        }
+      ]
+    }
+  }
+}
