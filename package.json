@@ -3,7 +3,7 @@
   "publisher": "LaaaaaaZzy",
   "version": "1.1.0",
   "displayName": "Copy with File & Line",
-  "description": "Copy selected code (or current line) with full file path and line numbers to clipboard. One shortcut, ready for AI prompts, code review, bug reports, and documentation. Supports both code+path and path-only copying.",
+  "description": "Copy selected code (or current line) with full file path and line numbers to clipboard / 一键复制选中代码（或当前行），带上完整文件路径和行号到剪贴板",
   "license": "MIT",
   "repository": {
     "type": "git",
