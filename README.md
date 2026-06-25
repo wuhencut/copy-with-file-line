@@ -43,9 +43,13 @@ Environment: /config/database.ts:10-14
 ## Installation / 安装
 
 - Search **Copy with File & Line** in VS Code / Cursor extension marketplace<br>在 VS Code / Cursor 扩展市场搜索 **Copy with File & Line**
-- Or install via VSIX: `code --install-extension copy-with-file-line-1.1.0.vsix`<br>或直接安装 VSIX
+- Or install via VSIX: `code --install-extension copy-with-file-line-1.2.0.vsix`<br>或直接安装 VSIX
 
 ## Release Notes / 更新日志
+
+### 1.2.0
+- Enhanced notification with file path, line range and character count / 增强通知：显示路径、行号范围和字符数
+- New app icon with cleaner design / 全新应用图标，简洁大气
 
 ### 1.1.0
 - Auto-copy current line when no text is selected / 无选区时自动复制整行
