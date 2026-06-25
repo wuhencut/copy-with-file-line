@@ -7,7 +7,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/LaaaaaaZzy/copy-with-file-line"
+    "url": "https://github.com/wuhencut/copy-with-file-line"
   },
   "engines": { "vscode": "^1.75.0" },
   "categories": ["Other"],
