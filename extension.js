@@ -42,7 +42,11 @@ function activate(context) {
       const actual = await vscode.env.clipboard.readText();
       // 弹窗反馈校验结果
       if (actual === expected) {
-        vscode.window.showInformationMessage(`✓ 复制成功 ${filePath}:${lineRange}`);
+        const lineCount = text.split('\n').length;
+        const lineInfo = lineCount > 1 ? `第 ${startLine}-${endLine} 行 (共 ${lineCount} 行)` : `第 ${startLine} 行`;
+        vscode.window.showInformationMessage(
+          `✓ 已复制到剪贴板\n📁 ${filePath}\n📍 ${lineInfo}\n📋 ${text.length} 个字符`
+        );
       } else {
         vscode.window.showErrorMessage(`✗ 复制失败，粘贴板内容不匹配`);
       }

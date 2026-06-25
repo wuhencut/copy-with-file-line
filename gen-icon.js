@@ -8,40 +8,30 @@ const svg = `
       <stop offset="0%" stop-color="#4A6CF7"/>
       <stop offset="100%" stop-color="#6366F1"/>
     </linearGradient>
-    <linearGradient id="hl" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FBBF24"/>
-      <stop offset="100%" stop-color="#F59E0B"/>
-    </linearGradient>
   </defs>
 
   <rect x="0" y="0" width="256" height="256" rx="52" fill="url(#bg)"/>
 
-  <rect x="44" y="32" width="168" height="192" rx="16" fill="#ffffff"/>
+  <rect x="56" y="48" width="144" height="160" rx="12" fill="#ffffff"/>
 
-  <rect x="44" y="32" width="168" height="40" rx="16" fill="#F1F5F9"/>
-  <rect x="44" y="58" width="168" height="14" fill="#F1F5F9"/>
+  <rect x="72" y="64" width="80" height="8" rx="4" fill="#E2E8F0"/>
+  <rect x="164" y="64" width="20" height="8" rx="4" fill="#E2E8F0"/>
 
-  <rect x="56" y="46" width="18" height="14" rx="3" fill="#F59E0B"/>
-  <rect x="56" y="52" width="18" height="1" fill="#FBBF24"/>
-  <rect x="80" y="48" width="80" height="10" rx="5" fill="#CBD5E1"/>
+  <rect x="68" y="88" width="120" height="4" rx="2" fill="#E2E8F0"/>
+  <rect x="68" y="102" width="100" height="4" rx="2" fill="#E2E8F0"/>
+  <rect x="68" y="116" width="80" height="4" rx="2" fill="#E2E8F0"/>
 
-  <rect x="56" y="88" width="144" height="3" rx="1.5" fill="#E2E8F0"/>
-  <rect x="56" y="100" width="130" height="3" rx="1.5" fill="#E2E8F0"/>
-  <rect x="56" y="112" width="110" height="3" rx="1.5" fill="#E2E8F0"/>
+  <rect x="60" y="130" width="136" height="36" rx="6" fill="#F59E0B" opacity="0.15"/>
+  <rect x="60" y="130" width="4" height="36" rx="2" fill="#F59E0B"/>
 
-  <rect x="50" y="124" width="156" height="34" rx="8" fill="url(#hl)" opacity="0.18"/>
-  <rect x="50" y="124" width="5" height="34" rx="2.5" fill="url(#hl)"/>
+  <rect x="72" y="141" width="70" height="4" rx="2" fill="#D97706"/>
+  <rect x="72" y="154" width="90" height="4" rx="2" fill="#D97706"/>
 
-  <circle cx="78" cy="141" r="13" fill="url(#hl)"/>
-  <text x="78" y="145" font-family="monospace" font-size="12" fill="#ffffff"
-        text-anchor="middle" dominant-baseline="middle" font-weight="bold">15</text>
+  <rect x="166" y="130" width="24" height="36" rx="6" fill="#F59E0B"/>
+  <text x="178" y="153" font-family="sans-serif" font-size="13" fill="#ffffff"
+        text-anchor="middle" dominant-baseline="middle" font-weight="bold">42</text>
 
-  <rect x="98" y="134" width="60" height="3" rx="1.5" fill="#D97706"/>
-  <rect x="98" y="146" width="85" height="3" rx="1.5" fill="#D97706"/>
-
-  <rect x="56" y="170" width="120" height="3" rx="1.5" fill="#E2E8F0"/>
-  <rect x="56" y="182" width="80" height="3" rx="1.5" fill="#E2E8F0"/>
-  <rect x="56" y="194" width="140" height="3" rx="1.5" fill="#E2E8F0"/>
+  <rect x="68" y="180" width="110" height="4" rx="2" fill="#E2E8F0"/>
 </svg>
 `;
 
