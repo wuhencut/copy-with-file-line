@@ -2,3 +2,6 @@
 .git/
 .vscode/
 *.vsix
+gen-icon.js
+node_modules/
+package-lock.json

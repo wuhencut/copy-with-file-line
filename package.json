@@ -5,6 +5,7 @@
   "displayName": "Copy with File & Line",
   "description": "Copy selected code (or current line) with full file path and line numbers to clipboard / 一键复制选中代码（或当前行），带上完整文件路径和行号到剪贴板",
   "license": "MIT",
+  "icon": "icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/wuhencut/copy-with-file-line"
@@ -64,5 +65,8 @@
         }
       ]
     }
+  },
+  "dependencies": {
+    "sharp": "^0.35.2"
   }
 }
