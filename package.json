@@ -1,7 +1,7 @@
 {
   "name": "copy-with-file-line",
   "publisher": "LaaaaaaZzy",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "displayName": "Copy with File & Line",
   "description": "Copy selected code (or current line) with full file path and line numbers to clipboard / 一键复制选中代码（或当前行），带上完整文件路径和行号到剪贴板",
   "license": "MIT",

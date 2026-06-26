@@ -52,7 +52,7 @@ function activate(context) {
       }
     }),
     // 命令②：只复制文件路径 + 行号（不含代码）
-    vscode.commands.registerCommand('copyWithFileLine.copyPath', () => {
+    vscode.commands.registerCommand('copyWithFileLine.copyPath', async () => {
       // 获取当前活跃编辑器
       const editor = vscode.window.activeTextEditor;
       if (!editor) return;
@@ -68,10 +68,20 @@ function activate(context) {
       const endLine = sel.end.line + 1;
       // 单行 / 多行行号字符串
       const lineRange = startLine === endLine ? `${startLine}` : `${startLine}-${endLine}`;
+      // 预期内容
+      const expected = `${filePath}:${lineRange}`;
       // 仅写入路径+行号到剪贴板，不带代码
-      vscode.env.clipboard.writeText(`${filePath}:${lineRange}`);
-      // 状态栏反馈
-      vscode.window.setStatusBarMessage(`Copied ${filePath}:${lineRange}`, 3000);
+      await vscode.env.clipboard.writeText(expected);
+      // 回读校验
+      const actual = await vscode.env.clipboard.readText();
+      // 弹窗反馈校验结果
+      if (actual === expected) {
+        vscode.window.showInformationMessage(
+          `✓ 已复制到剪贴板\n📁 ${filePath}\n📍 第 ${startLine} 行`
+        );
+      } else {
+        vscode.window.showErrorMessage(`✗ 复制失败，粘贴板内容不匹配`);
+      }
     })
   );
 }
