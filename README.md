@@ -7,8 +7,8 @@ Copy selected code (or current line) with full file path and line numbers to cli
 
 | Action / 操作 | Shortcut / 快捷键 | Output / 输出 |
 |---|---|---|
-| Copy path + line only<br>仅复制路径+行号 ⭐（高频） | `Shift+Cmd+C` (Mac) / `Shift+Ctrl+C` (Win/Linux) | `/path/to/file.ts:15-22` |
-| Copy code + path + line<br>复制代码+路径+行号 | `Shift+Cmd+Alt+C` (Mac) / `Shift+Ctrl+Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
+| Copy path + line only<br>仅复制路径+行号 ⭐（高频） | `Shift+Cmd+C` (Mac)<br>`Shift+Ctrl+C` (Win/Linux) | `/path/to/file.ts:15-22` |
+| Copy code + path + line<br>复制代码+路径+行号 | `Shift+Cmd+Option+C` (Mac)<br>`Shift+Ctrl+Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
 
 - **Smart line detection / 智能行号**: Single line → `file.ts:12`, multiple lines → `file.ts:12-18`
 - **No selection?** Copies the entire current line automatically / **无选区时**自动复制光标所在整行
@@ -54,7 +54,7 @@ Environment: /config/database.ts:10-14
 ### 1.1.0
 - Auto-copy current line when no text is selected / 无选区时自动复制整行
 - Clipboard verification with popup notification / 剪贴板校验并弹窗提示
-- Added `Alt+C` shortcut for Windows/Linux / 新增 Windows/Linux 的 `Alt+C` 快捷键
+- Added `Shift+Ctrl+Alt+C` shortcut / 新增 `Shift+Ctrl+Alt+C` 快捷键
 - Improved metadata and documentation / 完善元数据和文档
 
 ### 1.0.0
