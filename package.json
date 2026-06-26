@@ -55,12 +55,26 @@
         "key": "alt+c",
         "command": "copyWithFileLine.copy",
         "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+cmd+alt+c",
+        "command": "copyWithFileLine.copyPath",
+        "when": "editorTextFocus"
+      },
+      {
+        "key": "shift+ctrl+alt+c",
+        "command": "copyWithFileLine.copyPath",
+        "when": "editorTextFocus"
       }
     ],
     "menus": {
       "editor/context": [
         {
           "command": "copyWithFileLine.copy",
+          "group": "5_copypaste"
+        },
+        {
+          "command": "copyWithFileLine.copyPath",
           "group": "5_copypaste"
         }
       ]
