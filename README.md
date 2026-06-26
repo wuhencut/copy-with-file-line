@@ -7,8 +7,8 @@ Copy selected code (or current line) with full file path and line numbers to cli
 
 | Action / 操作 | Shortcut / 快捷键 | Output / 输出 |
 |---|---|---|
-| Copy code + path + line<br>复制代码+路径+行号 | `Shift+Cmd+C` (Mac) / `Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
-| Copy path + line only<br>仅复制路径+行号 | Command Palette: *Copy File Path & Line Number Only*<br>命令面板搜索：*仅复制文件路径和行号* | `/path/to/file.ts:15-22` |
+| Copy path + line only<br>仅复制路径+行号 ⭐（高频） | `Shift+Cmd+C` (Mac) / `Shift+Ctrl+C` (Win/Linux) | `/path/to/file.ts:15-22` |
+| Copy code + path + line<br>复制代码+路径+行号 | `Shift+Cmd+Alt+C` (Mac) / `Shift+Ctrl+Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
 
 - **Smart line detection / 智能行号**: Single line → `file.ts:12`, multiple lines → `file.ts:12-18`
 - **No selection?** Copies the entire current line automatically / **无选区时**自动复制光标所在整行
