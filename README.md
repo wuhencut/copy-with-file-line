@@ -8,7 +8,7 @@ Copy selected code (or current line) with full file path and line numbers to cli
 | Action / 操作 | Shortcut / 快捷键 | Output / 输出 |
 |---|---|---|
 | Copy path + line only<br>仅复制路径+行号 ⭐（高频） | `Shift+Cmd+C` (Mac)<br>`Shift+Ctrl+C` (Win/Linux) | `/path/to/file.ts:15-22` |
-| Copy code + path + line<br>复制代码+路径+行号 | `Shift+Cmd+Option+C` (Mac)<br>`Shift+Ctrl+Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
+| Copy code + path + line<br>复制代码+路径+行号 | `Ctrl+Cmd+Shift+C` (Mac)<br>`Shift+Ctrl+Alt+C` (Win/Linux) | `/path/to/file.ts:15-22\nselected code…` |
 
 - **Smart line detection / 智能行号**: Single line → `file.ts:12`, multiple lines → `file.ts:12-18`
 - **No selection?** Copies the entire current line automatically / **无选区时**自动复制光标所在整行
@@ -46,6 +46,9 @@ Environment: /config/database.ts:10-14
 - Or install via VSIX: `code --install-extension copy-with-file-line-1.2.0.vsix`<br>或直接安装 VSIX
 
 ## Release Notes / 更新日志
+
+### 1.5.0
+- Swapped keybindings: `Shift+Cmd+C` now copies path + line only (common case), `Ctrl+Cmd+Shift+C` for code included / 交换快捷键：`Shift+Cmd+C` 仅复制路径+行号，`Ctrl+Cmd+Shift+C` 复制源代码
 
 ### 1.2.0
 - Enhanced notification with file path, line range and character count / 增强通知：显示路径、行号范围和字符数
